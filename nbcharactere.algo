@@ -1,0 +1,22 @@
+ALGORITHM nb_length_sentence
+VAR
+    sentence: STRING :="Hello Word.";
+    sentencelenght: INTEGER :=0;
+    numberofwords: INTEGER :=1;
+    vowel=['a','e','i','o','u','y']
+    numberofvowel: INTEGER :=0;
+BEGIN
+    // read(sentence)
+    FOR i FROM 1 TO sentence.length{} STEP 1  DO
+        sentencelenght=sentencelenght+1;
+        IF (sentence[i]=" ") THEN
+            numberofwords=numberofwords+1;
+        END_IF  then
+        IF (sentence[i]=vowel) THEN
+            numberofvowel=numberofvowel+1;
+        END_IF
+    END_FOR
+    WRITE sentencelenght
+    WRITE numberofwords
+    WRITE numberofvowel
+END
